@@ -1,0 +1,251 @@
+app:
+  description: ''
+  icon: smiling_imp
+  icon_background: '#ECE9FE'
+  mode: workflow
+  name: RAG
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/ollama:0.0.7@8fc496b3892344da47db6125c76fc0dbfd8020753f198032751d83f561d9443e
+    version: null
+kind: app
+version: 0.4.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: knowledge-retrieval
+      id: 1761056968682-source-1761057002141-target
+      selected: false
+      source: '1761056968682'
+      sourceHandle: source
+      target: '1761057002141'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: end
+      id: 1761057005073-source-1761057014775-target
+      selected: false
+      source: '1761057005073'
+      sourceHandle: source
+      target: '1761057014775'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1761057002141-source-1761057005073-target
+      selected: false
+      source: '1761057002141'
+      sourceHandle: source
+      target: '1761057005073'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: 开始
+        type: start
+        variables:
+        - default: 'Ask a question about the wine data: '
+          hint: ''
+          label: query
+          max_length: 128
+          options: []
+          placeholder: ''
+          required: true
+          type: text-input
+          variable: query
+      height: 88
+      id: '1761056968682'
+      position:
+        x: 80
+        y: 282
+      positionAbsolute:
+        x: 80
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        dataset_ids:
+        - 1/AaZjhDUskLPj+72XT+2j95oqssQM6l6ZwW/wcmi5QrN3ZHbFWd886rV5Hdm17S
+        multiple_retrieval_config:
+          reranking_enable: false
+          reranking_mode: weighted_score
+          score_threshold: null
+          top_k: 6
+          weights:
+            keyword_setting:
+              keyword_weight: 0
+            vector_setting:
+              embedding_model_name: nomic-embed-text
+              embedding_provider_name: langgenius/ollama/ollama
+              vector_weight: 1
+            weight_type: customized
+        query_variable_selector:
+        - '1761056968682'
+        - query
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索
+        type: knowledge-retrieval
+      height: 90
+      id: '1761057002141'
+      position:
+        x: 390.30797778657416
+        y: 282
+      positionAbsolute:
+        x: 390.30797778657416
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1761057002141'
+          - result
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: qwen2.5:3b
+          provider: langgenius/ollama/ollama
+        prompt_config:
+          jinja2_variables: []
+        prompt_template:
+        - edition_type: basic
+          id: 45aafbbf-b7ec-4ec7-a2e9-b886630e811d
+          jinja2_text: "You are a retrieval-augmented assistant. Answer ONLY using\
+            \ [CONTEXT]. \nIf the context is insufficient, say: \"I can't find a definitive\
+            \ answer in the provided documents.\"\n\nInstructions:\n- Start with a\
+            \ 2–3 sentence summary, then list key points.\n- Cite the supporting chunks\
+            \ at the end (e.g., [Chunk 2], [Chunk 5]).\n\n[CONTEXT]\n{% for c in context\
+            \ %}\n[Chunk {{ loop.index }} | score={{ '%.3f'|format(c.score or 0) }}\
+            \ | {{ c.document_name or c.metadata.document_name }}]\n{{ c.content }}\n\
+            {% endfor %}"
+          role: system
+          text: "You are a retrieval-augmented assistant.  \nAnswer ONLY with the\
+            \ information relevant to the user’s question{{#context#}}.  \nIf evidence\
+            \ is insufficient, say: “I can’t find a definitive answer in the provided\
+            \ documents.”\n\nFormat:\n- Start with a 2–3 sentence summary.\n- Then\
+            \ list key points as bullets.\n- Cite chunks as [Chunk 2], [Chunk 5] when\
+            \ possible."
+        - id: bf342b21-bd7f-450d-9bf5-0b78d25004de
+          role: user
+          text: Your question:{{#1761056968682.query#}}
+        selected: false
+        title: LLM
+        type: llm
+        vision:
+          enabled: false
+      height: 88
+      id: '1761057005073'
+      position:
+        x: 684.5112580054985
+        y: 282
+      positionAbsolute:
+        x: 684.5112580054985
+        y: 282
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        outputs:
+        - value_selector:
+          - '1761057005073'
+          - text
+          value_type: string
+          variable: output
+        - value_selector:
+          - '1761057005073'
+          - reasoning_content
+          value_type: string
+          variable: output2
+        selected: false
+        title: 结束
+        type: end
+      height: 114
+      id: '1761057014775'
+      position:
+        x: 984.4479013412995
+        y: 282
+      positionAbsolute:
+        x: 984.4479013412995
+        y: 282
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: -635.1313444444871
+      y: 17.65386289571319
+      zoom: 0.9916644353127658
+  rag_pipeline_variables: []
