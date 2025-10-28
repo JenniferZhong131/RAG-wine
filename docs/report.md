@@ -26,8 +26,8 @@
             - The wine is sweet and jammy, featuring ripe tannins and attractive berry fruits.
               - [Chunk 2] This sweet wine smells like ripe plums and tastes fresh, grapy, and sugary with a little sparkle in texture.
               - [Chunk 5] This rich, smooth wine has ripe fruit and plenty of smooth plum flavors.
-  - Evidence: ![Question1.1](docs/screenshots/Q1.1.png)
-              ![Question1.2](docs/screenshots/Q1.2.png)
+  - Evidence: ![Question1.1](docs/screenshots/Q1_1.png)
+              ![Question1.2](docs/screenshots/Q1_2.png)
 - Q2: I am a beginner in wine, give me some recommendations
   - Answer: Based on the provided descriptions, here are some recommendations for beginners:
             - **Summary**: For those new to wine, these wines offer a gentle and easy-drinking experience with soft textures and fruity flavors that are accessible. They're designed to be enjoyed young and do not require complex palates or extensive aging.
@@ -36,8 +36,8 @@
               - [Chunk 5] suggests a wine that has a soft and fruity character, open and accessible, which aligns well for beginners who prefer wines with straightforward flavors.
               - The description of the wine from [Chunk 1] emphasizes its gentle tannins and acidity, providing freshness, all characteristics suitable for new wine drinkers.
             These recommendations can help you find wines that are easy to enjoy and understand, perfect for beginners.  
-  - Evidence: ![Question2.1](docs/screenshots/Q2.1.png)
-              ![Question2.2](docs/screenshots/Q2.2.png)
+  - Evidence: ![Question2.1](docs/screenshots/Q2_1.png)
+              ![Question2.2](docs/screenshots/Q2_2.png)
 ## 5. Failure Cases & Next Steps
 - Observed failures：
   - Zero-hit or low-confidence queries
