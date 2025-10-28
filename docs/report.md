@@ -12,7 +12,7 @@
 ## 2. System Overview
 - Workflow: Dify workflow with 3 nodes — Start → Knowledge Retrieval → LLM → End.
 - Model: qwen2.5:3b (chat)
-- Knowledge Base: 4 CSV shards — part_aa_desc.csv, part_ab_desc.csv, part_ac_desc.csv, part_ad_desc.csv.![WorkFlow](/screenshots/workflow.png)
+- Knowledge Base: 4 CSV shards — part_aa_desc.csv, part_ab_desc.csv, part_ac_desc.csv, part_ad_desc.csv.![WorkFlow](screenshots/workflow.png)
   - Ingestion column: text (full review text).
   - Chunking performed at ingest.
 
