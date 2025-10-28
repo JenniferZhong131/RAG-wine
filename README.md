@@ -1,14 +1,11 @@
-# Wine RAG (Dify)
+# 🍷 RAG-wine
 
-This repository contains a Dify-based Retrieval-Augmented Generation (RAG) app for wine reviews.
+Lightweight Retrieval-Augmented Generation (RAG) over professional wine reviews.
+Ask domain questions (flavor notes, regions, varieties) and see cited evidence chunks.
 
-## Quick Demo (Local)
-1. Start Dify (Docker) on your machine.
-2. Import the workflow (`workflow/rag_workflow.json`) into Dify (or open the existing app).
-3. Upload the knowledge: CSV files with a single `text` column (`part_aa_desc.csv` ... `part_ad_desc.csv`).
-4. Retrieval settings: Hybrid, weight 0.7/0.3, TopK=10, Score=0.1 (see `workflow/kb_settings.md`).
-5. Run the small Streamlit app:
-   ```bash
-   pip install streamlit requests
-   cp .env.example .env  # fill in DIFY_API_KEY & WORKFLOW_ID, or export vars manually
-   streamlit run app/streamlit_app.py
+<p align="center"> <img src="docs/screenshots/workflow.png" width="70%"> </p>
+
+## 🔗 Quick Links
+📄 Progress Report (this page) • Full version also in docs/report.md
+🧠 Workflow (DSL/YAML): workflow/RAG.yml
+🖥️ Demo App (Method B): app/streamlit_client.py
