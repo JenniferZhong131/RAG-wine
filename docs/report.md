@@ -1,6 +1,6 @@
 # Wine RAG – Progress Report
 
-## 1. Goal & Summary (半页)
+## 1. Goal & Summary
 - Build a lightweight Retrieval-Augmented Generation (RAG) system over professional wine reviews to answer domain questions (flavor notes, regions, varieties) and cite supporting evidence chunks.
 - Current result:
   - The end-to-end Dify workflow runs reliably with qwen2.5-3b (chat) and a hybrid retriever (semantic + keyword).
