@@ -7,5 +7,5 @@ Ask domain questions (flavor notes, regions, varieties) and see cited evidence c
 
 ## 🔗 Quick Links
 - 📄 **Progress Report**：[`docs/report.md`](docs/report.md)
-- 🧠 **Workflow (DSL/YAML)**：[`workflow/RAG.yml`](workflow/RAG.yml)
-- 🖥️ **Demo App (Method B)**：[`app/streamlit_client.py`](app/streamlit_client.py)
+- 🧠 **Workflow (DSL/YAML)**：[`workflow/RAG.yml`](workflow/rag_overflow.yml)
+- 🖥️ **Demo App**：[`app/streamlit_client.py`](app/streamlit_client.py)
