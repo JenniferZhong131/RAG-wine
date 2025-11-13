@@ -21,30 +21,34 @@
 - Chunking: length 800, overlap 32 (tokens/characters per Dify’s unit).
 
 ## 4. Demo Cases (with Evidence)
-- Q1:  What wine taste like plum?
-  - Answer: - This likable wine smells sweet and plummy, with red cherry and black-plum flavors spilling over the palate. It tastes smooth, juicy, and fruity.
-            - The wine is sweet and jammy, featuring ripe tannins and attractive berry fruits.
-              - [Chunk 2] This sweet wine smells like ripe plums and tastes fresh, grapy, and sugary with a little sparkle in texture.
-              - [Chunk 5] This rich, smooth wine has ripe fruit and plenty of smooth plum flavors.
-  - Evidence:
-<p align="center">
-  <img src="screenshots/Q1.1.png" width="48%">
-  <img src="screenshots/Q1.2.png" width="48%">
-</p>
-- Q2: I am a beginner in wine, give me some recommendations
-  - Answer: Based on the provided descriptions, here are some recommendations for beginners:
-            - **Summary**: For those new to wine, these wines offer a gentle and easy-drinking experience with soft textures and fruity flavors that are accessible. They're designed to be enjoyed young and do not require complex palates or extensive aging.
-            - **Key Points**:
-              - [Chunk 2] describes a wine that is "soft and light in character" with attractive red fruits, making it an easy-to-enjoy option.
-              - [Chunk 5] suggests a wine that has a soft and fruity character, open and accessible, which aligns well for beginners who prefer wines with straightforward flavors.
-              - The description of the wine from [Chunk 1] emphasizes its gentle tannins and acidity, providing freshness, all characteristics suitable for new wine drinkers.
-            These recommendations can help you find wines that are easy to enjoy and understand, perfect for beginners.  
-  - Evidence: 
-<p align="center">
-  <img src="screenshots/Q2.1.png" width="48%">
-  <img src="screenshots/Q2.2.png" width="48%">
-</p>
-## 5. Failure Cases & Next Steps
+
+- **Q1: What wine tastes like plum?**
+  - **Answer**
+    - This likable wine smells sweet and plummy, with red cherry and black-plum flavors spilling over the palate. It tastes smooth, juicy, and fruity.
+    - The wine is sweet and jammy, featuring ripe tannins and attractive berry fruits.
+    - [Chunk 2] This sweet wine smells like ripe plums and tastes fresh, grapy, and sugary with a little sparkle in texture.
+    - [Chunk 5] This rich, smooth wine has ripe fruit and plenty of smooth plum flavors.
+  - **Evidence**
+    <p align="center">
+      <img src="screenshots/Q1.1.png" width="48%">
+      <img src="screenshots/Q1.2.png" width="48%">
+    </p>
+
+- **Q2: I am a beginner in wine, give me some recommendations**
+  - **Answer**
+    - **Summary**: For those new to wine, these wines offer a gentle and easy-drinking experience with soft textures and fruity flavors that are accessible. They’re designed to be enjoyed young and do not require complex palates or extensive aging.
+    - **Key Points**
+      - [Chunk 2] “soft and light in character” with attractive red fruits → easy to enjoy.
+      - [Chunk 5] soft and fruity, open and accessible → fits beginners.
+      - [Chunk 1] gentle tannins & acidity → freshness for new drinkers.
+    - These recommendations help beginners find wines that are easy to enjoy and understand.
+  - **Evidence**
+    <p align="center">
+      <img src="screenshots/Q2.1.png" width="48%">
+      <img src="screenshots/Q2.2.png" width="48%">
+    </p>
+
+## 5. Failure cases and improvements
 - Observed failures：
   - Zero-hit or low-confidence queries
   - Ranking drift without rerank
