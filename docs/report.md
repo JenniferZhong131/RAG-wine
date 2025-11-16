@@ -30,8 +30,8 @@
     - [Chunk 5] This rich, smooth wine has ripe fruit and plenty of smooth plum flavors.
   - **Evidence**
     <p align="center">
-      <img src="screenshots/Q1.1.png" width="48%">
-      <img src="screenshots/Q1.2.png" width="48%">
+      <img src="screenshots/Q11.png" width="48%">
+      <img src="screenshots/Q12.png" width="48%">
     </p>
 
 - **Q2: I am a beginner in wine, give me some recommendations**
@@ -40,8 +40,8 @@
     - **Key Points**
       or white wines, try Riesling or Chardonnay; these are generally milder and can be easier on the palate. [Chunk 2]
     <p align="center">
-      <img src="screenshots/Q2.1.png" width="48%">
-      <img src="screenshots/Q2.2.png" width="48%">
+      <img src="screenshots/Q21.png" width="48%">
+      <img src="screenshots/Q22.png" width="48%">
     </p>
 
 ## 5. Failure cases and improvements
