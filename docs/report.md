@@ -47,10 +47,10 @@
 ## 5. Failure cases and improvements
 - Observed failures：
   - Zero-hit or low-confidence queries
-  - Ranking drift without rerank
-  - Over-strict prompting
+  - Always meet timeout problem
+  - Needs API key for reappear
 - Planned improvements：
-  - Add a reranker to reorder TopK before LLM.
-  - Query rewriting: add a “Query Reformulator” LLM step to expand synonyms (e.g., black currant ↔ cassis, dark fruit ↔ blackberry/black cherry).
-  - Add something new things (e.g. add Jazz music dataset to this and blend them to answer multiple questions).
-  - improving the wine dateset, not only with descriptions.
+  - Get the API key and check the way for reappear without download docker etc.
+  - improve the time complexity, reduce the situation of timeout and speed up the output.
+  - TO BE CONTINUED
+
