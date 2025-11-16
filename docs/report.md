@@ -36,13 +36,9 @@
 
 - **Q2: I am a beginner in wine, give me some recommendations**
   - **Answer**
-    - **Summary**: For those new to wine, these wines offer a gentle and easy-drinking experience with soft textures and fruity flavors that are accessible. They’re designed to be enjoyed young and do not require complex palates or extensive aging.
+    - **Summary**: As a beginner in wine, I recommend starting with red wines like Pinot Noir or Cabernet Sauvignon for their balanced flavors and lower tannin levels compared to other types.
     - **Key Points**
-      - [Chunk 2] “soft and light in character” with attractive red fruits → easy to enjoy.
-      - [Chunk 5] soft and fruity, open and accessible → fits beginners.
-      - [Chunk 1] gentle tannins & acidity → freshness for new drinkers.
-    - These recommendations help beginners find wines that are easy to enjoy and understand.
-  - **Evidence**
+      or white wines, try Riesling or Chardonnay; these are generally milder and can be easier on the palate. [Chunk 2]
     <p align="center">
       <img src="screenshots/Q2.1.png" width="48%">
       <img src="screenshots/Q2.2.png" width="48%">
